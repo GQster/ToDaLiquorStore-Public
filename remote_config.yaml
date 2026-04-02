@@ -47,8 +47,8 @@ minVersion: 1
 forceUpdateUrl: "https://play.google.com/store/apps/details?id=com.GQsWorks.ToDaLiquorStore"
 
 # --- April Fools / Holiday Example (Commented Out) ---
-# appTitle: "💪 To Da GYM!"
-# searchingText: "Finding gainz..."
-# overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
-# nominatimTerms: ["fitness center", "gym", "crossfit"]
-# searchKeywords: ["gym", "fitness", "crossfit", "training"]
+appTitle: "💪 To Da GYM!"
+searchingText: "Finding gainz..."
+overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
+nominatimTerms: ["fitness center", "gym", "crossfit"]
+searchKeywords: ["gym", "fitness", "crossfit", "training"]
