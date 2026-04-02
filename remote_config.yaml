@@ -1,0 +1,54 @@
+# To Da Liquor Store! Remote Configuration
+# This file allows dynamic overrides for search queries, titles, and themes.
+# Comments are supported (using #).
+
+appTitle: "🥃 To Da Liquor Store!"
+searchingText: "Searching..."
+
+# Overpass API query for finding liquor/alcohol stores
+# Use $radiusMeters, $lat, and $lng as placeholders
+overpassQuery: >
+  [out:json][timeout:25];
+  (
+    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(alcohol|wine|beer|beverages|spirits|bottle)$"];
+    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(convenience|supermarket|department_store|deli)$"]["alcohol"~"^(yes|permitted)$"];
+    nwr(around:$radiusMeters,$lat,$lng)["shop"]["name"~"liquor|wine|spirits|bottle|abc store|package store|packie|beverage center", i];
+    nwr(around:$radiusMeters,$lat,$lng)["craft"~"^(brewery|distillery|winery)$"];
+  );
+  out center;
+
+# Terms for Nominatim text-based fallback search
+nominatimTerms:
+  - "liquor store"
+  - "packie"
+  - "wine spirits"
+  - "wine beer"
+  - "beverage center"
+
+# Keywords used to filter and categorize stores
+searchKeywords:
+  - "liquor"
+  - "spirits"
+  - "abc store"
+  - "package store"
+  - "packie"
+  - "wine"
+  - "beer"
+  - "bottle"
+  - "beverage"
+  - "bottleshop"
+  - "distillery"
+  - "winery"
+  - "brewery"
+  - "alcohol"
+
+# Versioning and Force Update
+minVersion: 1
+forceUpdateUrl: "https://play.google.com/store/apps/details?id=com.GQsWorks.ToDaLiquorStore"
+
+# --- April Fools / Holiday Example (Commented Out) ---
+# appTitle: "💪 To Da GYM!"
+# searchingText: "Finding gainz..."
+# overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
+# nominatimTerms: ["fitness center", "gym", "crossfit"]
+# searchKeywords: ["gym", "fitness", "crossfit", "training"]
