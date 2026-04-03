@@ -11,6 +11,7 @@
 # # --- 🥃 To Da Liquor Store! (Original) ---
 # appTitle: "🥃 To Da Liquor Store!"
 # searchingText: "Searching..."
+# themeOverride: "DEFAULT"
 # overpassQuery: >
 #   [out:json][timeout:25];
 #   (
@@ -50,6 +51,7 @@
 # --- 💪 To Da GYM! Mode ---
 appTitle: "💪 To Da GYM!"
 searchingText: "Finding gainz..."
+themeOverride: "DEFAULT"
 overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
 nominatimTerms: ["fitness center", "gym", "crossfit"]
 searchKeywords: ["gym", "fitness", "crossfit", "training"]
