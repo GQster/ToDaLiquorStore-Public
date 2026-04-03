@@ -69,13 +69,13 @@ searchKeywords:
 # nominatimTerms: ["post office", "toy store"]
 # searchKeywords: ["santa", "toys", "postal"]
 
-# --- 🐰 EASTER Mode ---
-appTitle: "🐰 To Da Egg Hunt!"
-searchingText: "Finding eggs..."
-themeOverride: "EASTER" # Uses Pastel background
-overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"park\"];);out center;"
-nominatimTerms: ["park", "garden"]
-searchKeywords: ["park", "garden", "flowers"]
+## --- 🐰 EASTER Mode ---
+# appTitle: "🐰 To Da Egg Hunt!"
+# searchingText: "Finding eggs..."
+# themeOverride: "EASTER" # Uses Pastel background
+# overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"park\"];);out center;"
+# nominatimTerms: ["park", "garden"]
+# searchKeywords: ["park", "garden", "flowers"]
 
 
 # ---------------------------------------------------------
