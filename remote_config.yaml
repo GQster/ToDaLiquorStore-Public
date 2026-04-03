@@ -8,40 +8,40 @@
 # DEFAULT MODE
 # ---------------------------------------------------------
 
-# # --- 🥃 To Da Liquor Store! (Original) ---
-# appTitle: "🥃 To Da Liquor Store!"
-# searchingText: "Searching..."
-# themeOverride: "DEFAULT"
-# overpassQuery: >
-#   [out:json][timeout:25];
-#   (
-#     nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(alcohol|wine|beer|beverages|spirits|bottle)$"];
-#     nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(convenience|supermarket|department_store|deli)$"]["alcohol"~"^(yes|permitted)$"];
-#     nwr(around:$radiusMeters,$lat,$lng)["shop"]["name"~"liquor|wine|spirits|bottle|abc store|package store|packie|beverage center", i];
-#     nwr(around:$radiusMeters,$lat,$lng)["craft"~"^(brewery|distillery|winery)$"];
-#   );
-#   out center;
-# nominatimTerms:
-#   - "liquor store"
-#   - "packie"
-#   - "wine spirits"
-#   - "wine beer"
-#   - "beverage center"
-# searchKeywords:
-#   - "liquor"
-#   - "spirits"
-#   - "abc store"
-#   - "package store"
-#   - "packie"
-#   - "wine"
-#   - "beer"
-#   - "bottle"
-#   - "beverage"
-#   - "bottleshop"
-#   - "distillery"
-#   - "winery"
-#   - "brewery"
-#   - "alcohol"
+# --- 🥃 To Da Liquor Store! (Original) ---
+appTitle: "🥃 To Da Liquor Store!"
+searchingText: "Searching..."
+themeOverride: "DEFAULT"
+overpassQuery: >
+  [out:json][timeout:25];
+  (
+    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(alcohol|wine|beer|beverages|spirits|bottle)$"];
+    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(convenience|supermarket|department_store|deli)$"]["alcohol"~"^(yes|permitted)$"];
+    nwr(around:$radiusMeters,$lat,$lng)["shop"]["name"~"liquor|wine|spirits|bottle|abc store|package store|packie|beverage center", i];
+    nwr(around:$radiusMeters,$lat,$lng)["craft"~"^(brewery|distillery|winery)$"];
+  );
+  out center;
+nominatimTerms:
+  - "liquor store"
+  - "packie"
+  - "wine spirits"
+  - "wine beer"
+  - "beverage center"
+searchKeywords:
+  - "liquor"
+  - "spirits"
+  - "abc store"
+  - "package store"
+  - "packie"
+  - "wine"
+  - "beer"
+  - "bottle"
+  - "beverage"
+  - "bottleshop"
+  - "distillery"
+  - "winery"
+  - "brewery"
+  - "alcohol"
 
 
 # ---------------------------------------------------------
