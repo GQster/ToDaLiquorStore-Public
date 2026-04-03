@@ -5,53 +5,59 @@
 # For best results, comment out the unused mode entirely!
 
 # ---------------------------------------------------------
-# CURRENT MODE (Enabled)
-# ---------------------------------------------------------
-
-# --- 💪 To Da GYM! Mode ---
-appTitle: "💪 To Da GYM!"
-searchingText: "Finding gainz..."
-overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
-nominatimTerms: ["fitness center", "gym", "crossfit"]
-searchKeywords: ["gym", "fitness", "crossfit", "training"]
-
-# ---------------------------------------------------------
-# TEMPLATES (Commented Out)
+# DEFAULT MODE
 # ---------------------------------------------------------
 
 # --- 🥃 To Da Liquor Store! (Original) ---
-# appTitle: "🥃 To Da Liquor Store!"
-# searchingText: "Searching..."
-# overpassQuery: >
-#   [out:json][timeout:25];
-#   (
-#     nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(alcohol|wine|beer|beverages|spirits|bottle)$"];
-#     nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(convenience|supermarket|department_store|deli)$"]["alcohol"~"^(yes|permitted)$"];
-#     nwr(around:$radiusMeters,$lat,$lng)["shop"]["name"~"liquor|wine|spirits|bottle|abc store|package store|packie|beverage center", i];
-#     nwr(around:$radiusMeters,$lat,$lng)["craft"~"^(brewery|distillery|winery)$"];
-#   );
-#   out center;
-# nominatimTerms:
-#   - "liquor store"
-#   - "packie"
-#   - "wine spirits"
-#   - "wine beer"
-#   - "beverage center"
-# searchKeywords:
-#   - "liquor"
-#   - "spirits"
-#   - "abc store"
-#   - "package store"
-#   - "packie"
-#   - "wine"
-#   - "beer"
-#   - "bottle"
-#   - "beverage"
-#   - "bottleshop"
-#   - "distillery"
-#   - "winery"
-#   - "brewery"
-#   - "alcohol"
+appTitle: "🥃 To Da Liquor Store!"
+searchingText: "Searching..."
+overpassQuery: >
+  [out:json][timeout:25];
+  (
+    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(alcohol|wine|beer|beverages|spirits|bottle)$"];
+    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(convenience|supermarket|department_store|deli)$"]["alcohol"~"^(yes|permitted)$"];
+    nwr(around:$radiusMeters,$lat,$lng)["shop"]["name"~"liquor|wine|spirits|bottle|abc store|package store|packie|beverage center", i];
+    nwr(around:$radiusMeters,$lat,$lng)["craft"~"^(brewery|distillery|winery)$"];
+  );
+  out center;
+nominatimTerms:
+  - "liquor store"
+  - "packie"
+  - "wine spirits"
+  - "wine beer"
+  - "beverage center"
+searchKeywords:
+  - "liquor"
+  - "spirits"
+  - "abc store"
+  - "package store"
+  - "packie"
+  - "wine"
+  - "beer"
+  - "bottle"
+  - "beverage"
+  - "bottleshop"
+  - "distillery"
+  - "winery"
+  - "brewery"
+  - "alcohol"
+
+
+
+# ---------------------------------------------------------
+# GYM Mode
+# ---------------------------------------------------------
+
+# # --- 💪 To Da GYM! Mode ---
+# appTitle: "💪 To Da GYM!"
+# searchingText: "Finding gainz..."
+# overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
+# nominatimTerms: ["fitness center", "gym", "crossfit"]
+# searchKeywords: ["gym", "fitness", "crossfit", "training"]
+
+
+
+
 
 # ---------------------------------------------------------
 # GLOBAL SETTINGS (Applied to all modes)
