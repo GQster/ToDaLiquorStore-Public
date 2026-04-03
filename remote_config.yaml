@@ -8,40 +8,39 @@
 # DEFAULT MODE
 # ---------------------------------------------------------
 
-# --- 🥃 To Da Liquor Store! (Original) ---
-appTitle: "🥃 To Da Liquor Store!"
-searchingText: "Searching..."
-overpassQuery: >
-  [out:json][timeout:25];
-  (
-    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(alcohol|wine|beer|beverages|spirits|bottle)$"];
-    nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(convenience|supermarket|department_store|deli)$"]["alcohol"~"^(yes|permitted)$"];
-    nwr(around:$radiusMeters,$lat,$lng)["shop"]["name"~"liquor|wine|spirits|bottle|abc store|package store|packie|beverage center", i];
-    nwr(around:$radiusMeters,$lat,$lng)["craft"~"^(brewery|distillery|winery)$"];
-  );
-  out center;
-nominatimTerms:
-  - "liquor store"
-  - "packie"
-  - "wine spirits"
-  - "wine beer"
-  - "beverage center"
-searchKeywords:
-  - "liquor"
-  - "spirits"
-  - "abc store"
-  - "package store"
-  - "packie"
-  - "wine"
-  - "beer"
-  - "bottle"
-  - "beverage"
-  - "bottleshop"
-  - "distillery"
-  - "winery"
-  - "brewery"
-  - "alcohol"
-
+# # --- 🥃 To Da Liquor Store! (Original) ---
+# appTitle: "🥃 To Da Liquor Store!"
+# searchingText: "Searching..."
+# overpassQuery: >
+#   [out:json][timeout:25];
+#   (
+#     nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(alcohol|wine|beer|beverages|spirits|bottle)$"];
+#     nwr(around:$radiusMeters,$lat,$lng)["shop"~"^(convenience|supermarket|department_store|deli)$"]["alcohol"~"^(yes|permitted)$"];
+#     nwr(around:$radiusMeters,$lat,$lng)["shop"]["name"~"liquor|wine|spirits|bottle|abc store|package store|packie|beverage center", i];
+#     nwr(around:$radiusMeters,$lat,$lng)["craft"~"^(brewery|distillery|winery)$"];
+#   );
+#   out center;
+# nominatimTerms:
+#   - "liquor store"
+#   - "packie"
+#   - "wine spirits"
+#   - "wine beer"
+#   - "beverage center"
+# searchKeywords:
+#   - "liquor"
+#   - "spirits"
+#   - "abc store"
+#   - "package store"
+#   - "packie"
+#   - "wine"
+#   - "beer"
+#   - "bottle"
+#   - "beverage"
+#   - "bottleshop"
+#   - "distillery"
+#   - "winery"
+#   - "brewery"
+#   - "alcohol"
 
 
 # ---------------------------------------------------------
@@ -56,7 +55,25 @@ searchKeywords:
 # searchKeywords: ["gym", "fitness", "crossfit", "training"]
 
 
+# ---------------------------------------------------------
+# Holliday Mode
+# ---------------------------------------------------------
 
+--- 🎄 XMAS Mode ---
+appTitle: "🎄 To Da North Pole!"
+searchingText: "Finding Santa..."
+themeOverride: "XMAS"   # Uses Red/Green background
+overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"amenity\"=\"post_office\"];);out center;"
+nominatimTerms: ["post office", "toy store"]
+searchKeywords: ["santa", "toys", "postal"]
+
+# --- 🐰 EASTER Mode ---
+# appTitle: "🐰 To Da Egg Hunt!"
+# searchingText: "Finding eggs..."
+# themeOverride: "EASTER" # Uses Pastel background
+# overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"park\"];);out center;"
+# nominatimTerms: ["park", "garden"]
+# searchKeywords: ["park", "garden", "flowers"]
 
 
 # ---------------------------------------------------------
@@ -64,4 +81,3 @@ searchKeywords:
 # ---------------------------------------------------------
 minVersion: 1
 forceUpdateUrl: "https://play.google.com/store/apps/details?id=com.GQsWorks.ToDaLiquorStore"
-
