@@ -47,27 +47,27 @@
 # GYM Mode
 # ---------------------------------------------------------
 
-# # --- 💪 To Da GYM! Mode ---
-# appTitle: "💪 To Da GYM!"
-# searchingText: "Finding gainz..."
-# overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
-# nominatimTerms: ["fitness center", "gym", "crossfit"]
-# searchKeywords: ["gym", "fitness", "crossfit", "training"]
+# --- 💪 To Da GYM! Mode ---
+appTitle: "💪 To Da GYM!"
+searchingText: "Finding gainz..."
+overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"leisure\"=\"fitness_centre\"];);out center;"
+nominatimTerms: ["fitness center", "gym", "crossfit"]
+searchKeywords: ["gym", "fitness", "crossfit", "training"]
 
 
 # ---------------------------------------------------------
 # Holliday Mode
 # ---------------------------------------------------------
 
-# --- 🎄 XMAS Mode ---
-appTitle: "🎄 To Da North Pole!"
-searchingText: "Finding Santa..."
-themeOverride: "XMAS"   # Uses Red/Green background
-overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"amenity\"=\"post_office\"];);out center;"
-nominatimTerms: ["post office", "toy store"]
-searchKeywords: ["santa", "toys", "postal"]
+## --- 🎄 XMAS Mode ---
+# appTitle: "🎄 To Da North Pole!"
+# searchingText: "Finding Santa..."
+# themeOverride: "XMAS"   # Uses Red/Green background
+# overpassQuery: "[out:json][timeout:25];(nwr(around:$radiusMeters,$lat,$lng)[\"amenity\"=\"post_office\"];);out center;"
+# nominatimTerms: ["post office", "toy store"]
+# searchKeywords: ["santa", "toys", "postal"]
 
-# --- 🐰 EASTER Mode ---
+## --- 🐰 EASTER Mode ---
 # appTitle: "🐰 To Da Egg Hunt!"
 # searchingText: "Finding eggs..."
 # themeOverride: "EASTER" # Uses Pastel background
