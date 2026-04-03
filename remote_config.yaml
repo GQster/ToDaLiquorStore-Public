@@ -59,7 +59,7 @@
 # Holliday Mode
 # ---------------------------------------------------------
 
---- 🎄 XMAS Mode ---
+# --- 🎄 XMAS Mode ---
 appTitle: "🎄 To Da North Pole!"
 searchingText: "Finding Santa..."
 themeOverride: "XMAS"   # Uses Red/Green background
